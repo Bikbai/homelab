@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+echo "node exporer setup: creating users" | systemd-cat -p info
+groupadd -f node-exporter
+useradd -g node-exporter --no-create-home --shell /bin/false node-exporter
+mkdir /etc/node-exporter
+chown node-exporter:node-exporter /etc/node-exporter
+echo "node exporer setup: download and extract file" | systemd-cat -p info
+wget \
+  https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz
+tar -xvf node_exporter-1.8.2.linux-amd64.tar.gz
+mv node_exporter-1.8.2.linux-amd64 /etc/node-exporter
+chown node-exporter:node-exporter /etc/node-exporter
+
+echo "node exporer setup: setup service" | systemd-cat -p info
+cat > /etc/systemd/system/node_exporter.service <<EOF
+[Unit]
+Description=Node Exporter
+After=network.target
+After=systemd-user-sessions.service
+After=network-online.target
+ 
+[Service]
+User=node-exporter
+Group=node_exporter
+Type=simple
+ExecStart=/etc/node-exporter/node_exporter\
+  --web.listen-address=:9102\
+  --collector.disable-defaults\
+  --collector.hwmon.chip-include\
+  --collector.hwmon.sensor-include\
+  --collector.cpu\
+  --collector.diskstats\
+  --collector.loadavg\
+  --collector.meminfo\
+  --collector.stat\
+
+
+ExecStop=tailscale down
+TimeoutSec=30
+Restart=on-failure
+RestartSec=30
+StartLimitInterval=350
+StartLimitBurst=10
+ 
+[Install]
+WantedBy=multi-user.target
+EOF
+
+chmod 664 /usr/lib/systemd/system/node_exporter.service
+systemctl enable node-explorer
+systemctl start node-explorer
+wget http://localhost:9102/metrics

@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "args": [],
+        "label": "test-install",
+        "type": "shell",
+        "command": "scp ${file} ${input:server}:${fileBasenameNoExtension}${fileExtname}",
+        "problemMatcher": []
+      }
+    ],
+    "inputs": [
+        {
+          "type": "pickString",
+          "id": "server",
+          "description": "Server to deploy",
+          "options": [
+            "sa@sqlserver.lan",
+            "prom@prometheus.lan",
+            "root@23.164.240.117"
+          ],
+          "default": "sa@sqlserver.lan"
+        }
+    ]    
+}
