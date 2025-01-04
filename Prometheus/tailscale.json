@@ -1,23 +1,30 @@
 [
     {
-      "targets": [ "100.64.0.10:9104", "myslave2:9104" ],
+      "targets": [ "100.116.172.99:9104"],
       "labels": {
         "env": "prod",
-        "job": "mysql_slave"
+        "job": "skwiz-pk"
       }
     },
     {
-      "targets": [ "mymaster:9104" ],
+      "targets": [ "100.90.195.43:9104" ],
       "labels": {
         "env": "prod",
-        "job": "mysql_master"
+        "job": "sqlserver"
       }
     },
     {
-      "targets": [ "mymaster:9100", "myslave1:9100", "myslave2:9100" ],
+      "targets": [ "100.64.36.39:9104" ],
       "labels": {
         "env": "prod",
-        "job": "node"
+        "job": "prometheus"
       }
-    }
-  ]
+    },
+    {
+      "targets": [ "100.126.36.60:9104" ],
+      "labels": {
+        "env": "prod",
+        "job": "prometheus"
+      }
+    }    
+]

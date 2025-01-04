@@ -1,0 +1,359 @@
+{
+    "AuthURL": "",
+    "BackendState": "Running",
+    "CertDomains": null,
+    "ClientVersion": {
+        "RunningLatest": true
+    },
+    "CurrentTailnet": {
+        "MagicDNSEnabled": true,
+        "MagicDNSSuffix": "taileaade2.ts.net",
+        "Name": "demidov.yaroslaw@gmail.com"
+    },
+    "HaveNodeKey": true,
+    "Health": [],
+    "MagicDNSSuffix": "taileaade2.ts.net",
+    "Peer": {
+        "nodekey:1d9e6b113def66510d7c54661e72b93a6239a36d636a72ba5e49a379938a272d": {
+            "Active": true,
+            "Addrs": null,
+            "AllowedIPs": [
+                "100.74.39.46/32",
+                "fd7a:115c:a1e0::9301:272f/128"
+            ],
+            "Created": "2024-09-27T20:01:01.641819569Z",
+            "CurAddr": "",
+            "DNSName": "macbook-air-aroslav.taileaade2.ts.net.",
+            "ExitNode": false,
+            "ExitNodeOption": false,
+            "HostName": "MacBook-Air-Aroslav",
+            "ID": "n9qPnQxuDt11CNTRL",
+            "InEngine": true,
+            "InMagicSock": true,
+            "InNetworkMap": true,
+            "KeyExpiry": "2025-03-26T20:01:02Z",
+            "LastHandshake": "0001-01-01T00:00:00Z",
+            "LastSeen": "2024-12-30T20:25:21.1Z",
+            "LastWrite": "2025-01-04T16:45:20.4614831+03:00",
+            "OS": "macOS",
+            "Online": false,
+            "PeerAPIURL": [
+                "http://100.74.39.46:61102",
+                "http://[fd7a:115c:a1e0::9301:272f]:48153"
+            ],
+            "PublicKey": "nodekey:1d9e6b113def66510d7c54661e72b93a6239a36d636a72ba5e49a379938a272d",
+            "Relay": "nue",
+            "RxBytes": 0,
+            "TailscaleIPs": [
+                "100.74.39.46",
+                "fd7a:115c:a1e0::9301:272f"
+            ],
+            "TxBytes": 3108,
+            "UserID": 8240954842659807
+        },
+        "nodekey:58061ab768f4eaf676b68c8a33f8e4a85200cb1ac7d1d820768c535e12f12616": {
+            "Active": false,
+            "Addrs": null,
+            "AllowedIPs": [
+                "100.69.247.100/32",
+                "fd7a:115c:a1e0::bf01:f764/128"
+            ],
+            "Created": "2024-09-27T20:13:08.318627613Z",
+            "CurAddr": "",
+            "DNSName": "ninja.taileaade2.ts.net.",
+            "ExitNode": false,
+            "ExitNodeOption": false,
+            "HostName": "Ninja",
+            "ID": "nWmih6Qjot11CNTRL",
+            "InEngine": false,
+            "InMagicSock": true,
+            "InNetworkMap": true,
+            "KeyExpiry": "2025-07-01T22:55:33Z",
+            "LastHandshake": "0001-01-01T00:00:00Z",
+            "LastSeen": "2025-01-03T16:40:23.1Z",
+            "LastWrite": "2025-01-04T02:48:57.2997784+03:00",
+            "OS": "windows",
+            "Online": false,
+            "PeerAPIURL": [
+                "http://100.69.247.100:50178",
+                "http://[fd7a:115c:a1e0::bf01:f764]:57630"
+            ],
+            "PublicKey": "nodekey:58061ab768f4eaf676b68c8a33f8e4a85200cb1ac7d1d820768c535e12f12616",
+            "Relay": "fra",
+            "RxBytes": 0,
+            "TailscaleIPs": [
+                "100.69.247.100",
+                "fd7a:115c:a1e0::bf01:f764"
+            ],
+            "TxBytes": 0,
+            "UserID": 8240954842659807
+        },
+        "nodekey:61b6dbbc4877a8901d74c54ae2be15da80273731f0c3e537dc0905a8b7002426": {
+            "Active": false,
+            "Addrs": null,
+            "AllowedIPs": [
+                "100.64.36.39/32",
+                "fd7a:115c:a1e0::b701:2428/128"
+            ],
+            "Created": "2025-01-02T23:01:58.690740765Z",
+            "CurAddr": "",
+            "DNSName": "prometheus.taileaade2.ts.net.",
+            "ExitNode": false,
+            "ExitNodeOption": false,
+            "HostName": "prometheus",
+            "ID": "n4qLpxZLyX11CNTRL",
+            "InEngine": false,
+            "InMagicSock": true,
+            "InNetworkMap": true,
+            "KeyExpiry": "2025-07-01T23:01:59Z",
+            "LastHandshake": "0001-01-01T00:00:00Z",
+            "LastSeen": "0001-01-01T00:00:00Z",
+            "LastWrite": "2025-01-03T15:22:22.8851481+03:00",
+            "OS": "linux",
+            "Online": true,
+            "PeerAPIURL": [
+                "http://100.64.36.39:32799",
+                "http://[fd7a:115c:a1e0::b701:2428]:64121"
+            ],
+            "PublicKey": "nodekey:61b6dbbc4877a8901d74c54ae2be15da80273731f0c3e537dc0905a8b7002426",
+            "Relay": "nue",
+            "RxBytes": 0,
+            "TailscaleIPs": [
+                "100.64.36.39",
+                "fd7a:115c:a1e0::b701:2428"
+            ],
+            "TxBytes": 0,
+            "UserID": 6770046084931057
+        },
+        "nodekey:7dd53385ef27371af9bae9f634498492ceda4d40f056d5c34d4db669363e243b": {
+            "Active": false,
+            "Addrs": null,
+            "AllowedIPs": [
+                "100.126.36.60/32",
+                "fd7a:115c:a1e0::3601:243c/128"
+            ],
+            "Created": "2025-01-03T12:16:13.456131052Z",
+            "CurAddr": "",
+            "DNSName": "vm826174.taileaade2.ts.net.",
+            "ExitNode": false,
+            "ExitNodeOption": false,
+            "HostName": "vm826174",
+            "ID": "nNDEDbMruz11CNTRL",
+            "InEngine": false,
+            "InMagicSock": true,
+            "InNetworkMap": true,
+            "KeyExpiry": "2025-07-02T12:16:13Z",
+            "LastHandshake": "0001-01-01T00:00:00Z",
+            "LastSeen": "0001-01-01T00:00:00Z",
+            "LastWrite": "2025-01-04T02:45:54.1941152+03:00",
+            "OS": "linux",
+            "Online": true,
+            "PeerAPIURL": [
+                "http://100.126.36.60:33129",
+                "http://[fd7a:115c:a1e0::3601:243c]:1"
+            ],
+            "PublicKey": "nodekey:7dd53385ef27371af9bae9f634498492ceda4d40f056d5c34d4db669363e243b",
+            "Relay": "fra",
+            "RxBytes": 0,
+            "TailscaleIPs": [
+                "100.126.36.60",
+                "fd7a:115c:a1e0::3601:243c"
+            ],
+            "TxBytes": 0,
+            "UserID": 6770046084931057
+        },
+        "nodekey:95fc126db98ec5dedddb3617d5207b46282d2581785b5839ac570838e767414a": {
+            "Active": false,
+            "Addrs": null,
+            "AllowedIPs": [
+                "100.89.27.54/32",
+                "fd7a:115c:a1e0::c001:1b36/128"
+            ],
+            "Created": "2024-09-27T20:06:53.754050785Z",
+            "CurAddr": "",
+            "DNSName": "xiaomi-2201123g.taileaade2.ts.net.",
+            "ExitNode": false,
+            "ExitNodeOption": false,
+            "HostName": "localhost",
+            "ID": "nMGt8hQTXF11CNTRL",
+            "InEngine": false,
+            "InMagicSock": true,
+            "InNetworkMap": true,
+            "KeyExpiry": "2025-06-28T20:03:41Z",
+            "LastHandshake": "0001-01-01T00:00:00Z",
+            "LastSeen": "2024-12-30T20:20:48.1Z",
+            "LastWrite": "0001-01-01T00:00:00Z",
+            "OS": "android",
+            "Online": false,
+            "PeerAPIURL": [
+                "http://100.89.27.54:1",
+                "http://[fd7a:115c:a1e0::c001:1b36]:1"
+            ],
+            "PublicKey": "nodekey:95fc126db98ec5dedddb3617d5207b46282d2581785b5839ac570838e767414a",
+            "Relay": "nue",
+            "RxBytes": 0,
+            "TailscaleIPs": [
+                "100.89.27.54",
+                "fd7a:115c:a1e0::c001:1b36"
+            ],
+            "TxBytes": 0,
+            "UserID": 8240954842659807
+        },
+        "nodekey:ba022013375969ddec550b50829216c8332c85dcc78b5742a3de42abf32c4900": {
+            "Active": false,
+            "Addrs": null,
+            "AllowedIPs": [
+                "100.108.73.1/32",
+                "fd7a:115c:a1e0::f301:4901/128"
+            ],
+            "Created": "2024-12-30T20:26:18.857523315Z",
+            "CurAddr": "",
+            "DNSName": "samsung-sm-s9210.taileaade2.ts.net.",
+            "ExitNode": false,
+            "ExitNodeOption": false,
+            "HostName": "localhost",
+            "ID": "nfvqMrZweX11CNTRL",
+            "InEngine": false,
+            "InMagicSock": true,
+            "InNetworkMap": true,
+            "KeyExpiry": "2025-06-28T20:26:19Z",
+            "LastHandshake": "0001-01-01T00:00:00Z",
+            "LastSeen": "2024-12-30T20:26:46.1Z",
+            "LastWrite": "0001-01-01T00:00:00Z",
+            "OS": "android",
+            "Online": false,
+            "PeerAPIURL": [
+                "http://100.108.73.1:1",
+                "http://[fd7a:115c:a1e0::f301:4901]:1"
+            ],
+            "PublicKey": "nodekey:ba022013375969ddec550b50829216c8332c85dcc78b5742a3de42abf32c4900",
+            "Relay": "fra",
+            "RxBytes": 0,
+            "TailscaleIPs": [
+                "100.108.73.1",
+                "fd7a:115c:a1e0::f301:4901"
+            ],
+            "TxBytes": 0,
+            "UserID": 8240954842659807
+        },
+        "nodekey:dfe7e18fe9aac02de15fae9a859e92bf7c8cde191a20b8f8844eebad4fe55474": {
+            "Active": false,
+            "Addrs": null,
+            "AllowedIPs": [
+                "100.90.195.43/32",
+                "fd7a:115c:a1e0::5301:c32b/128"
+            ],
+            "Created": "2025-01-02T22:59:33.712982394Z",
+            "CurAddr": "",
+            "DNSName": "sqlserver.taileaade2.ts.net.",
+            "ExitNode": false,
+            "ExitNodeOption": false,
+            "HostName": "sqlserver",
+            "ID": "nUXRaJL3yG11CNTRL",
+            "InEngine": false,
+            "InMagicSock": true,
+            "InNetworkMap": true,
+            "KeyExpiry": "2025-07-02T12:23:36Z",
+            "LastHandshake": "0001-01-01T00:00:00Z",
+            "LastSeen": "0001-01-01T00:00:00Z",
+            "LastWrite": "2025-01-04T02:46:45.4383082+03:00",
+            "OS": "linux",
+            "Online": true,
+            "PeerAPIURL": [
+                "http://100.90.195.43:36793",
+                "http://[fd7a:115c:a1e0::5301:c32b]:52968"
+            ],
+            "PublicKey": "nodekey:dfe7e18fe9aac02de15fae9a859e92bf7c8cde191a20b8f8844eebad4fe55474",
+            "Relay": "nue",
+            "RxBytes": 0,
+            "TailscaleIPs": [
+                "100.90.195.43",
+                "fd7a:115c:a1e0::5301:c32b"
+            ],
+            "TxBytes": 0,
+            "UserID": 6770046084931057
+        }
+    },
+    "Self": {
+        "Active": false,
+        "Addrs": [
+            "95.24.120.224:32447",
+            "172.28.64.1:41641",
+            "192.168.88.107:41641"
+        ],
+        "AllowedIPs": [
+            "100.116.172.99/32",
+            "fd7a:115c:a1e0::d801:ac64/128"
+        ],
+        "CapMap": {
+            "https://tailscale.com/cap/file-sharing": null,
+            "https://tailscale.com/cap/ssh": null,
+            "https://tailscale.com/cap/tailnet-lock": null,
+            "probe-udp-lifetime": null,
+            "ssh-behavior-v1": null,
+            "ssh-env-vars": null,
+            "store-appc-routes": null
+        },
+        "Capabilities": [
+            "HTTPS://TAILSCALE.COM/s/DEPRECATED-NODE-CAPS#see-https://github.com/tailscale/tailscale/issues/11508",
+            "https://tailscale.com/cap/file-sharing",
+            "https://tailscale.com/cap/ssh",
+            "https://tailscale.com/cap/tailnet-lock",
+            "probe-udp-lifetime",
+            "ssh-behavior-v1",
+            "ssh-env-vars",
+            "store-appc-routes"
+        ],
+        "Created": "2025-01-02T22:57:09.533157074Z",
+        "CurAddr": "",
+        "DNSName": "skwiz-main.taileaade2.ts.net.",
+        "ExitNode": false,
+        "ExitNodeOption": false,
+        "HostName": "SKWIZ-MAIN",
+        "ID": "ncWnkcZKyC11CNTRL",
+        "InEngine": false,
+        "InMagicSock": false,
+        "InNetworkMap": true,
+        "KeyExpiry": "2025-07-01T22:57:49Z",
+        "LastHandshake": "0001-01-01T00:00:00Z",
+        "LastSeen": "0001-01-01T00:00:00Z",
+        "LastWrite": "0001-01-01T00:00:00Z",
+        "OS": "windows",
+        "Online": true,
+        "PeerAPIURL": [
+            "http://100.116.172.99:55961",
+            "http://[fd7a:115c:a1e0::d801:ac64]:58753"
+        ],
+        "PublicKey": "nodekey:dd5cb737be57164d92e1d1c36ed5dfb5cf7dfabd3a62095a7b4351c119249445",
+        "Relay": "fra",
+        "RxBytes": 0,
+        "TailscaleIPs": [
+            "100.116.172.99",
+            "fd7a:115c:a1e0::d801:ac64"
+        ],
+        "TxBytes": 0,
+        "UserID": 6770046084931057
+    },
+    "TUN": true,
+    "TailscaleIPs": [
+        "100.116.172.99",
+        "fd7a:115c:a1e0::d801:ac64"
+    ],
+    "User": {
+        "6770046084931057": {
+            "DisplayName": "Roman Demidov",
+            "ID": 6770046084931057,
+            "LoginName": "demidov.roman@gmail.com",
+            "ProfilePicURL": "https://lh3.googleusercontent.com/a/ACg8ocK_mRCMsgvizBZr5IvWsXGtO7r0iLZjDZHtuHa1G-3vbJY1Rdg=s96-c",
+            "Roles": []
+        },
+        "8240954842659807": {
+            "DisplayName": "Yaroslav Demidov",
+            "ID": 8240954842659807,
+            "LoginName": "demidov.yaroslaw@gmail.com",
+            "ProfilePicURL": "https://lh3.googleusercontent.com/a/ACg8ocLyU-N1oIBE_Rr9jquIgnNniQMNywWPUi_8dL-RrHHEQodvnd63=s96-c",
+            "Roles": []
+        }
+    },
+    "Version": "1.78.1-t8903926f7-gc4163954e"
+}

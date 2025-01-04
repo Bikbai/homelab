@@ -1,0 +1,17 @@
+[Unit]
+Description=Tailscale client and monitoring
+After=network.target
+After=systemd-user-sessions.service
+After=network-online.target
+ 
+[Service]
+ExecStart=/opt/tailscale/tailscale-web-start.sh
+ExecStop=tailscale down
+TimeoutSec=30
+Restart=on-failure
+RestartSec=30
+StartLimitInterval=350
+StartLimitBurst=10
+ 
+[Install]
+WantedBy=multi-user.target
