@@ -5,11 +5,18 @@
     "tasks": [
       {
         "args": [],
-        "label": "test-install",
+        "label": "Copy single file",
         "type": "shell",
-        "command": "scp ${file} ${input:server}:${fileBasenameNoExtension}${fileExtname}",
+        "command": "scp ${file} ${input:server}:${fileBasenameNoExtension}${fileExtname};",
         "problemMatcher": []
-      }
+      },
+      {
+        "args": [],
+        "label": "Configure Prometheus ",
+        "type": "shell",
+        "command": "scp ${fileDirname}/*.* prom@prometheus.lan:/etc/prometheus/;ssh prom@prometheus.lan sudo -S service prometheus restart",
+        "problemMatcher": []
+      }      
     ],
     "inputs": [
         {
@@ -19,7 +26,8 @@
           "options": [
             "sa@sqlserver.lan",
             "prom@prometheus.lan",
-            "root@23.164.240.117"
+            "root@23.164.240.117",
+            "root@proxmox.lan"
           ],
           "default": "sa@sqlserver.lan"
         }

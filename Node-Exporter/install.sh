@@ -13,12 +13,18 @@ chown node_exporter:node_exporter /etc/node_exporter
 echo "node exporer setup: download and extract file" | systemd-cat -p info
 
 echo "STEP 2/3: Downloading and installing files"
-wget \
-  https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz \
-  -q
-tar -xvf node_exporter-1.8.2.linux-amd64.tar.gz
-mv node_exporter-1.8.2.linux-amd64/node_exporter /etc/node_exporter/
-chown node_exporter:node_exporter /etc/node_exporter
+
+if [ ! -f /etc/node_exporter/node_exporter ]; then
+  echo "Download started"
+  wget \
+    https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz \
+    -q
+  tar -xvf node_exporter-1.8.2.linux-amd64.tar.gz
+  mv node_exporter-1.8.2.linux-amd64/node_exporter /etc/node_exporter/
+  chown node_exporter:node_exporter /etc/node_exporter    
+else
+  echo "Download skipped, already set up"
+fi
 
 echo "STEP 3/3: Setup service"
 echo "node exporer setup: setup service" | systemd-cat -p info
@@ -36,11 +42,13 @@ Type=simple
 ExecStart=/etc/node_exporter/node_exporter\
   --web.listen-address=:9102\
   --collector.disable-defaults\
+  --collector.hwmon\
   --collector.cpu\
   --collector.diskstats\
   --collector.loadavg\
   --collector.meminfo\
-  --collector.stat
+  --collector.stat\
+  --collector.filesystem  
 TimeoutSec=30
 Restart=on-failure
 RestartSec=30
@@ -53,8 +61,10 @@ EOF
 
 chmod 664 /etc/systemd/system/node_exporter.service
 systemctl enable node_exporter
+systemctl stop node_exporter
 systemctl start node_exporter
 
 echo "STEP 3/3. Waiting 2 sec and test."
 sleep 2s
-curl http://localhost:9102/metrics
+curl http://localhost:9102/metrics &
+rm node_exporter-* -Rf &

@@ -1,33 +1,48 @@
 global:
-  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
-  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
-  # scrape_timeout is set to the global default (10s).
-
-# Alertmanager configuration
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  scrape_protocols:
+  - OpenMetricsText1.0.0
+  - OpenMetricsText0.0.1
+  - PrometheusText1.0.0
+  - PrometheusText0.0.4
+  evaluation_interval: 15s
+runtime:
+  gogc: 75
 alerting:
   alertmanagers:
-    - static_configs:
-        - targets:
-          # - alertmanager:9093
-
-# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
-rule_files:
-  # - "first_rules.yml"
-  # - "second_rules.yml"
-
-# A scrape configuration containing exactly one endpoint to scrape:
-# Here it's Prometheus itself.
-scrape_configs:
-  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-  - job_name: "prometheus"
-
-    # metrics_path defaults to '/metrics'
-    # scheme defaults to 'http'.
-
+  - follow_redirects: true
+    enable_http2: true
+    scheme: http
+    timeout: 10s
+    api_version: v2
     static_configs:
-      - targets: ["localhost:9090"]
+    - targets: []
+scrape_configs:
+- job_name: prometheus
+  honor_timestamps: true
+  track_timestamps_staleness: false
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  scrape_protocols:
+  - OpenMetricsText1.0.0
+  - OpenMetricsText0.0.1
+  - PrometheusText1.0.0
+  - PrometheusText0.0.4
+  metrics_path: /metrics
+  scheme: http
+  enable_compression: true
+  follow_redirects: true
+  enable_http2: true
+  static_configs:
+  - targets:
+    - localhost:9090
+- job_name: 'tailnet'  # This is a default value, it is mandatory.
+  file_sd_configs:
+    - files:
+      - tailscale.json
 
-  - job_name: 'tailnet'  # This is a default value, it is mandatory.
-    file_sd_configs:
-      - files:
-        - tailscale.json
+- job_name: 'node_exporter'  # This is a default value, it is mandatory.
+  file_sd_configs:
+    - files:
+      - node_exporter.json

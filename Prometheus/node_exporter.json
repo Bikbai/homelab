@@ -1,30 +1,37 @@
 [
     {
-      "targets": [ "100.116.172.99:9101"],
+      "targets": [ "100.116.172.99:9102"],
       "labels": {
         "env": "prod",
         "job": "skwiz-pk"
       }
     },
     {
-      "targets": [ "100.90.195.43:9101" ],
+      "targets": [ "100.90.195.43:9102" ],
       "labels": {
         "env": "prod",
         "job": "sqlserver"
       }
     },
     {
-      "targets": [ "100.64.36.39:9101" ],
+      "targets": [ "100.64.36.39:9102" ],
       "labels": {
         "env": "prod",
         "job": "prometheus"
       }
     },
     {
-      "targets": [ "100.126.36.60:9101" ],
+      "targets": [ "100.126.36.60:9102" ],
       "labels": {
         "env": "prod",
         "job": "vm826174"
       }
-    }    
+    },
+    {
+      "targets": [ "proxmox.lan:9102" ],
+      "labels": {
+        "env": "prod",
+        "job": "proxmox"
+      }
+    }        
 ]
