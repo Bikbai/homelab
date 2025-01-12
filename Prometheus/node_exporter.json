@@ -3,35 +3,49 @@
       "targets": [ "100.116.172.99:9102"],
       "labels": {
         "env": "prod",
-        "job": "skwiz-pk"
+        "job": "node:skwiz-pk"
       }
     },
     {
       "targets": [ "100.90.195.43:9102" ],
       "labels": {
         "env": "prod",
-        "job": "sqlserver"
+        "job": "node:sqlserver"
       }
     },
     {
       "targets": [ "100.64.36.39:9102" ],
       "labels": {
         "env": "prod",
-        "job": "prometheus"
+        "job": "node:prometheus"
       }
     },
     {
       "targets": [ "100.126.36.60:9102" ],
       "labels": {
         "env": "prod",
-        "job": "vm826174"
+        "job": "node:vm826174"
       }
     },
     {
       "targets": [ "proxmox.lan:9102" ],
       "labels": {
         "env": "prod",
-        "job": "proxmox"
+        "job": "node:proxmox"
       }
-    }        
+    },
+    {
+      "targets": [ "kafka.lan:9102" ],
+      "labels": {
+        "env": "prod",
+        "job": "node:kafka"
+      }
+    },
+    {
+      "targets": [ "docker.lan:9102" ],
+      "labels": {
+        "env": "prod",
+        "job": "node:docker"
+      }
+    }    
 ]

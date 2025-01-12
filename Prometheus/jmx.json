@@ -1,0 +1,9 @@
+[
+    {
+      "targets": [ "kafka.lan:5556"],
+      "labels": {
+        "env": "prod",
+        "job": "jmx:kafka"
+      }
+    }
+]

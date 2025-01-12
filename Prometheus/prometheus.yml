@@ -41,8 +41,17 @@ scrape_configs:
   file_sd_configs:
     - files:
       - tailscale.json
-
 - job_name: 'node_exporter'  # This is a default value, it is mandatory.
   file_sd_configs:
     - files:
       - node_exporter.json
+- job_name: 'jmx'
+  file_sd_configs:
+    - files:
+      - jmx.json
+- job_name: redis_exporter
+  static_configs:
+  - targets: ['docker.lan:9121']
+- job_name: kafka_exporter
+  static_configs:
+  - targets: ['kafka.lan:9308']

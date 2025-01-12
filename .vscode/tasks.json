@@ -27,7 +27,9 @@
             "sa@sqlserver.lan",
             "prom@prometheus.lan",
             "root@23.164.240.117",
-            "root@proxmox.lan"
+            "root@proxmox.lan",
+            "skwiz@kafka.lan",
+            "root@docker.lan",
           ],
           "default": "sa@sqlserver.lan"
         }
