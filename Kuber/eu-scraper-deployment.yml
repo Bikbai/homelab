@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scraper-deployment
+  labels:
+    app: scraper
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scraper
+  template:
+    metadata:
+      labels:
+        app: scraper
+    spec:
+      containers:
+        - name: eu-battles
+          command: ['python']
+          args: ['scrape_starter.py', '-server', 'europe', '-apitype', 'BATTLES']
+          image: docker.io/abome40k/albion-scraper:battles
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"                    
+          stdin: true
+          tty: true
+          imagePullPolicy: IfNotPresent
+        - name: eu-events
+          command: ['python']
+          args: ['scrape_starter.py', '-server', 'europe', '-apitype', 'EVENTS']
+          image: docker.io/abome40k/albion-scraper:battles
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"          
+          stdin: true
+          tty: true
+          imagePullPolicy: IfNotPresent          
