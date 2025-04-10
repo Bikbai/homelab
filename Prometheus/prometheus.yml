@@ -54,4 +54,4 @@ scrape_configs:
   - targets: ['docker.lan:9121']
 - job_name: kafka_exporter
   static_configs:
-  - targets: ['kafka.lan:9308']
+  - targets: ['prometheus.lan:9308']

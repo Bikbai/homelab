@@ -41,14 +41,8 @@ Group=node_exporter
 Type=simple
 ExecStart=/etc/node_exporter/node_exporter\
   --web.listen-address=:9102\
-  --collector.disable-defaults\
-  --collector.hwmon\
-  --collector.cpu\
-  --collector.diskstats\
-  --collector.loadavg\
-  --collector.meminfo\
-  --collector.stat\
-  --collector.filesystem  
+  --collector.systemd\
+  --collector.processes
 TimeoutSec=30
 Restart=on-failure
 RestartSec=30

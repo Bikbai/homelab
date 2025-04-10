@@ -30,6 +30,8 @@
             "root@proxmox.lan",
             "skwiz@kafka.lan",
             "root@docker.lan",
+            "dbserver@dbserver.lan",
+            "kube@kube.lan",
           ],
           "default": "sa@sqlserver.lan"
         }

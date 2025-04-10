@@ -2,50 +2,69 @@
     {
       "targets": [ "100.116.172.99:9102"],
       "labels": {
+        "tailscale": "skwiz-main",
         "env": "prod",
-        "job": "node:skwiz-pk"
+        "job": "node"
       }
     },
     {
-      "targets": [ "100.90.195.43:9102" ],
+      "targets": [ "sqlserver:9102" ],
       "labels": {
+        "tailscale": "sqlserver",
         "env": "prod",
-        "job": "node:sqlserver"
+        "job": "node"
       }
     },
     {
-      "targets": [ "100.64.36.39:9102" ],
+      "targets": [ "prometheus:9102" ],
       "labels": {
+        "tailscale": "prometheus",
         "env": "prod",
-        "job": "node:prometheus"
+        "job": "node"
       }
     },
     {
-      "targets": [ "100.126.36.60:9102" ],
+      "targets": [ "vm826174:9102" ],
       "labels": {
+        "tailscale": "vps",
         "env": "prod",
-        "job": "node:vm826174"
+        "job": "node"
       }
     },
     {
       "targets": [ "proxmox.lan:9102" ],
       "labels": {
         "env": "prod",
-        "job": "node:proxmox"
+        "job": "node"
       }
     },
     {
       "targets": [ "kafka.lan:9102" ],
       "labels": {
         "env": "prod",
-        "job": "node:kafka"
+        "job": "node"
       }
     },
     {
       "targets": [ "docker.lan:9102" ],
       "labels": {
         "env": "prod",
-        "job": "node:docker"
+        "job": "node"
       }
-    }    
+    },
+    {
+      "targets": [ "dbserver.lan:9102" ],
+      "labels": {
+        "env": "prod",
+        "job": "node"
+      }
+    },
+    {
+      "targets": [ "kube.lan:9102" ],
+      "labels": {
+        "env": "prod",
+        "host": "kuber",
+        "job": "node"
+      }
+    }     
 ]
